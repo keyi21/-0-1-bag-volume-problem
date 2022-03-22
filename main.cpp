@@ -33,6 +33,9 @@ double perp[100];//单位物品价值排序后
 int order[100];//物品编号
 int put[100];//设置是否装入
 
+int Used[100];//背包使用状况
+
+
 //打开文件
 int FOP(){
     ifstream  myfile("/Users/keyi/Documents/专业作业/软件工程/软件工程1/data.txt");//从已有文件读入
@@ -222,18 +225,16 @@ double bound(int i)
 }
 
 
-/*int FCLZ(){
+int FCLZ(){
     ofstream outfile("out.txt", ios::trunc);//向文件导出；
     //将数据输出至out.txt文件中
-    for (int i = 0; i < 25; i++)
+    for (int i = 0; i < 2; i++)
     {
-        outfile  << I[i][0] << "    " << I[i][1] << "    "
-            << str[i][0] << "    " << str[i][1] << "    "
-            << str[i][2] << "    " << str[i][3]<< endl;
+        outfile  << Used << "    " << BagVolume << "    "<< endl;
     };
     outfile.close();
     return 0;;
-}*/
+}
 
 int main(){
     int i = 1;
@@ -284,6 +285,7 @@ int main(){
     }
    
     printf("将文件导出至out.txt中\n");
+     FCLZ();
     return 0;
-    //FCLZ();
+   
 }
