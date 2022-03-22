@@ -1,6 +1,6 @@
 import java.awt.*;
-        import java.awt.geom.*;
-        import javax.swing.*;
+import java.awt.geom.*;
+import javax.swing.*;
 
 public class Main extends JPanel {
     int[] data = {
