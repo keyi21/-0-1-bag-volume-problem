@@ -250,14 +250,21 @@ int main(){
         cin>>i;
         switch (i) {
             case 1:
+                startTime = clock();
                 Greed();
+                startTime = clock();
+                cout<<"程序运行时间："<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<endl;
                 break;
             case 2:
+                startTime = clock();
                 DynamicProgramming();
+                startTime = clock();
+                cout<<"程序运行时间："<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<endl;
+                
                 break;
                 //();
             case 3:
-               
+               startTime = clock();
                 backtrack(1);
                 printf("最有价值为：%lf\n",bestp);
                 printf("需要装入的物品编号是：");
@@ -267,6 +274,9 @@ int main(){
                         printf("%d ",order[i]);
                 }
                 cout<<endl;
+                startTime = clock();
+                cout<<"程序运行时间："<<(double)(endTime-startTime)/CLOCKS_PER_SEC<<endl;
+                
                 break;
             default:
                 break;
